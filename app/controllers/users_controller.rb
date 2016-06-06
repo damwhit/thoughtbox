@@ -8,8 +8,9 @@ class UsersController < ApplicationController
     if @user.save && params[:password] == params[:password_confirmation]
       session[:user_id] = @user.id
       flash[:success] = "Welcome #{@user.email}"
-      redirect_to @user
+      redirect_to links_path
     else
+      flash.now[:alert] = "Something went wrong, please try again"
       render :new
     end
   end
