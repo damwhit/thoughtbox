@@ -24,8 +24,19 @@
           <td>
             <%= link.url %>
           </td>
+          <td class="status">
+            <% if !link.read %>
+              <h6>unread</h6>
+            <% else %>
+              <h6>read</h6>
+            <% end %>
+          </td>
           <td>
-            <%= link.read %>
+            <% if !link.read %>
+            <a class="change btn btn-warning" data-id=<%= link.id %> >mark as read</a>
+            <% else %>
+            <a class="change btn btn-warning" data-id=<%= link.id %> >mark as unread</a>
+            <% end %>
           </td>
         </tr>
         <% end %>
