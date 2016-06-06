@@ -10,6 +10,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'figaro'
 gem 'pg'
 gem 'validate_url'
+gem 'responders', '~> 2.0'
 
 group :development, :test do
   gem 'pry-rails'
