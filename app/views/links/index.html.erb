@@ -1,6 +1,6 @@
 <h1>Links</h1>
 <div class="row">
-  <div class="container">
+  <div class="container col-md-offset-1">
     <%= form_for(@link) do |f| %>
 
       <%= f.label :name %>
@@ -12,9 +12,15 @@
       <%= f.submit "save", class: "btn btn-success" %>
     <% end %>
   </div>
+  <div class="container col-md-6 col-md-offset-2">
+    <form class="form-inline" id="searchLinks">
+      <label for="search">search</label>
+      <input type="text" class="form-control" name="search" id="search">
+    </form>
+  </div>
   <div class="container">
     <table class="col-md-10">
-      <tbody>
+      <tbody id="tbody">
         <% if @links %>
         <% @links.each do |link| %>
         <tr>
