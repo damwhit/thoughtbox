@@ -7,9 +7,9 @@
       <span class="icon-bar"></span>
     </button>
     <% if current_user %>
-      <a class="navbar-brand" href="/">ThoughtBox</a>
-    <% else %>
       <a class="navbar-brand" href="/links">ThoughtBox</a>
+    <% else %>
+      <a class="navbar-brand" href="/">ThoughtBox</a>
     <% end %>
   </div>
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -17,6 +17,9 @@
       <% if current_user %>
         <li>
           <a href="/logout", data-method="delete">logout</a>
+        </li>
+        <li>
+          <a href="/links" >links</a>
         </li>
       <% else %>
         <li>
