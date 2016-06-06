@@ -19,23 +19,14 @@ $(document).ready(function(){
                             + link.url +
                             '</h3></td><td class="status"><h6>'
                             + link.read +
-                            '</h3></td><td><h3><a class="delete btn btn-danger" data-id='
+                            '</h6></td><td><h3><a class="change btn btn-warning" data-id='
                             + link.id +
-                            ' id=delete' + link.id + '>'
-                            + 'delete' +
-                            '</a></h3></td><td><h3><a class="change btn btn-success" data-id='
-                            + link.id +
-                            ' data-q=' + link.quality +
-                            ' data-change=up' +
-                            ' id=up' + link.id + '>'
-                            + 'thumbs up' +
-                            '</a></h3></td><td><h3><a class="change btn btn-warning" data-id='
-                            + link.id +
-                            ' data-q=' + link.quality +
-                            ' data-change=down' +
-                            ' id=down' + link.id + '>'
-                            + 'thumbs down' +
-                            '</a></h3></td></tr>'
+                           '>'
+                            + 'mark as' +
+                            '</a></h3></td><td><h3><a class="edit btn btn-primary" data-id='
+                            + link.id + '>'
+                            + 'edit' +
+                            '</a></h3></td><td></tr>'
                           )
       })
     });
