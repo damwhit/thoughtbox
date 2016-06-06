@@ -19,10 +19,10 @@
         <% @links.each do |link| %>
         <tr>
           <td>
-            <h3 class="name" data-id=<%= link.id %> ><%= link.name %></h3>
+            <h3 class="edit name" data-id=<%= link.id %> ><%= link.name %></h3>
           </td>
           <td>
-            <h6 class="url" data-id=<%= link.id %> ><%= link.url %></h6>
+            <h6 class="edit url" data-id=<%= link.id %> ><%= link.url %></h6>
           </td>
           <td class="status">
             <% if !link.read %>
@@ -37,6 +37,9 @@
             <% else %>
             <a class="change btn btn-warning"  data-id=<%= link.id %> >mark as unread</a>
             <% end %>
+          </td>
+          <td>
+            <a class="edit btn btn-primary"  data-id=<%= link.id %> >edit</a>
           </td>
         </tr>
         <% end %>

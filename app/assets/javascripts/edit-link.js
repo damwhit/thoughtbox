@@ -1,14 +1,15 @@
-$(document).on('click', '.name', function(event) {
-  $(this).attr('contentEditable', 'true');
+$(document).on('click', '.edit', function(event) {
 
-  $(this).on('blur keydown', function(e){
+  var name = $('.name')
+  name.attr('contentEditable', 'true');
+  name.on('blur keydown', function(e){
     var nameText = this.textContent
     var linkId = $(this).data('id')
     var key = e.which
 
     if (key == 13) {
       e.preventDefault()
-      $('.name').blur()
+      $('.edit').blur()
     }
 
     if (key == 13 || e.type == 'blur') {
@@ -25,17 +26,18 @@ $(document).on('click', '.name', function(event) {
   })
 });
 
-$(document).on('click', '.url', function(event) {
-  $(this).attr('contentEditable', 'true');
+$(document).on('click', '.edit', function(event) {
 
-  $(this).on('blur keydown', function(e){
+  var url = $('.url')
+  url.attr('contentEditable', 'true');
+  url.on('blur keydown', function(e){
     var urlText = this.textContent
     var linkId = $(this).data('id')
     var key = e.which
 
     if (key == 13) {
       e.preventDefault()
-      $('.url').blur()
+      $('.edit').blur()
     }
 
     if (key == 13 || e.type == 'blur') {
