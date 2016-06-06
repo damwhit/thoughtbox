@@ -13,11 +13,11 @@ $(document).on('click', '.sort', function(event) {
                           + link.url +
                           '</h3></td><td class="status"><h6>'
                           + readStatus[link.read] +
-                          '</h6></td><td><h3><a class="change btn btn-warning" data-id='
+                          '</h6></td><td><a class="change btn btn-warning" data-id='
                           + link.id +
                          '>'
                           + readButton[link.read] +
-                          '</a></h3></td><td><h3><a class="edit btn btn-primary" data-id='
+                          '</a></td><td><h3><a class="edit btn btn-primary" data-id='
                           + link.id + '>'
                           + 'edit' +
                           '</a></h3></td><td></tr>'
