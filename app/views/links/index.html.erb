@@ -13,16 +13,16 @@
     <% end %>
   </div>
   <div class="container">
-    <table class="col-md-6">
+    <table class="col-md-10">
       <tbody>
         <% if @links %>
         <% @links.each do |link| %>
         <tr>
           <td>
-            <%= link.name %>
+            <h3 class="name" data-id=<%= link.id %> ><%= link.name %></h3>
           </td>
           <td>
-            <%= link.url %>
+            <h6 class="url" data-id=<%= link.id %> ><%= link.url %></h6>
           </td>
           <td class="status">
             <% if !link.read %>

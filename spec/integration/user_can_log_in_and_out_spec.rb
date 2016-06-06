@@ -40,4 +40,17 @@ RSpec.feature 'user creates an account' do
 
     expect(page).to have_content("goodbye")
   end
+
+  scenario 'they cant sign into existing account' do
+    user1 = create(:user, email: 'david@gmail.com')
+
+    visit '/login'
+
+    fill_in 'session_email', with: 'david@gmail.com'
+    fill_in 'session_password', with: 'poo'
+
+    click_on 'Log in'
+
+    expect(page).to have_content("Something went wrong, please try again")
+  end
 end
